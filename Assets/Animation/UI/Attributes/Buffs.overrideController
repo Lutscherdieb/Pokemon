@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Buffs
+  m_Controller: {fileID: 9100000, guid: 3760d631cd7299742905f7b60e55210f, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 449c79078db3cc54f8c9511773051fac, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e7dc54efc32020f48afab8166f8e4c2c, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3c815e81d2efa224aba7cccff9f428d4, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9800656731f0f7c4eadf57665b7eecfa, type: 2}

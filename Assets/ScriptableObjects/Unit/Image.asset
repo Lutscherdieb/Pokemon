@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c373a1ce17da6974898cf7d271b78747, type: 3}
+  m_Name: Image
+  m_EditorClassIdentifier: 
+  _developerDescription: 
+  _id: 
+  _value: {fileID: 21300000, guid: 653a6fe1d97188644a3747cd5e674bc4, type: 3}
+  _changed: {fileID: 11400000, guid: 5044543c8c0a2f1488fcfc8150c83f7f, type: 2}
+  _changedWithHistory: {fileID: 0}
+  _triggerChangedOnOnEnable: 0
+  _triggerChangedWithHistoryOnOnEnable: 0
+  _oldValue: {fileID: 21300000, guid: 179bd38ab997c7440844309bc52e708a, type: 3}
+  _initialValue: {fileID: 0}
+  _preChangeTransformers: []

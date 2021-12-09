@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd330fedd1c40d45a4d7b3dc632bea9, type: 3}
+  m_Name: EnemySkills
+  m_EditorClassIdentifier: 
+  _developerDescription: 
+  Cleared: {fileID: 11400000, guid: 508aa57c123457647b57aac1a6b3decd, type: 2}
+  _startCleared: 1
+  Added: {fileID: 11400000, guid: 75273406454f04f4b8e8b6a827185abb, type: 2}
+  Removed: {fileID: 11400000, guid: 3f10e23f20e0f4b4b8c56025b84871be, type: 2}
+  list: []

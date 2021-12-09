@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6abeeafa30df144408b293811b6d4645, type: 3}
+  m_Name: Tackle
+  m_EditorClassIdentifier: 
+  image: {fileID: 5358339777047750641, guid: cb3a56e86b2bb9c4991509ad74cde6ad, type: 3}
+  description: 
+  types:
+  - {fileID: 11400000, guid: 629b1b9925ffea44ab18755b28610fc5, type: 2}
+  basePower: 25
+  strengthMultiplier: 1
+  intelligenceMultiplier: 1
+  dexterityMultiplier: 1
+  constitutionMultiplier: 1
