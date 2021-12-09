@@ -152,25 +152,9 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1899562012907376004, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
-      propertyPath: XpGainRate
-      value: 
-      objectReference: {fileID: 11400000, guid: 6f591032d60397f479e2599998999660, type: 2}
-    - target: {fileID: 1899562012907376004, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
-      propertyPath: DexPerLevel
-      value: 
-      objectReference: {fileID: 11400000, guid: afe1bd0d861a62e49982934308d2cb12, type: 2}
-    - target: {fileID: 1899562012907376004, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
       propertyPath: DodgedEvent
       value: 
       objectReference: {fileID: 11400000, guid: b06e0dcce00b6444da682f5767865229, type: 2}
-    - target: {fileID: 1899562012907376004, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
-      propertyPath: IntPerLevel
-      value: 
-      objectReference: {fileID: 11400000, guid: b1b14a820faa0dd44836172731240557, type: 2}
-    - target: {fileID: 1899562012907376004, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
-      propertyPath: StrPerLevel
-      value: 
-      objectReference: {fileID: 11400000, guid: a0a6c80d41d4825489857c4655c764e7, type: 2}
     - target: {fileID: 1899562012907376004, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
       propertyPath: dodge._usage
       value: 2
@@ -196,10 +180,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 125b56158e8a195469a90bc951347792, type: 2}
     - target: {fileID: 1899562012907376004, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
-      propertyPath: ConstPerLevel
-      value: 
-      objectReference: {fileID: 11400000, guid: 48f968a39e4d8044ab83ba895b9415db, type: 2}
-    - target: {fileID: 1899562012907376004, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
       propertyPath: ShieldDamaged
       value: 
       objectReference: {fileID: 11400000, guid: b56653adba4c70041a230318f2cfc21f, type: 2}
@@ -211,10 +191,6 @@ PrefabInstance:
       propertyPath: shield._usage
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1899562012907376004, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
-      propertyPath: MaxLifePerConst
-      value: 
-      objectReference: {fileID: 11400000, guid: 0d48a4878116d4c48abad0a1257b658e, type: 2}
     - target: {fileID: 1899562012907376004, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
       propertyPath: dodge._variable
       value: 
@@ -240,6 +216,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1899562012907376004, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
+      propertyPath: EffectiveAgainst
+      value: 
+      objectReference: {fileID: 11400000, guid: 6e0dc3fcd71c3784d9ad04ff3aa73b16, type: 2}
+    - target: {fileID: 1899562012907376004, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
       propertyPath: armour._variable
       value: 
       objectReference: {fileID: 11400000, guid: 55a19078ad095a84c8e42ecd58ac591a, type: 2}
@@ -260,17 +240,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: a5f361ac030086943ab959397fd5a3ef, type: 2}
     - target: {fileID: 1899562012907376004, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
-      propertyPath: ArmourPerStrength
+      propertyPath: TypeReductionEvent
       value: 
-      objectReference: {fileID: 11400000, guid: f51945e83e0193148bace0fc6bd37285, type: 2}
-    - target: {fileID: 1899562012907376004, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
-      propertyPath: DodgePerDexterity
-      value: 
-      objectReference: {fileID: 11400000, guid: 30fdc525679cf8b45b39acff933a4013, type: 2}
-    - target: {fileID: 1899562012907376004, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
-      propertyPath: ReductionPerArmour
-      value: 
-      objectReference: {fileID: 11400000, guid: c2878b29c03ef2340b62302f69ddc17b, type: 2}
+      objectReference: {fileID: 11400000, guid: e7758c8812c645e4999efd1bd55aee6b, type: 2}
     - target: {fileID: 1899562012907376004, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
       propertyPath: strength._variable
       value: 
@@ -304,10 +276,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 930e35bb855599e44a6b87dc44ca8508, type: 2}
     - target: {fileID: 1899562012907376004, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
-      propertyPath: ShieldPerIntelligence
-      value: 
-      objectReference: {fileID: 11400000, guid: f4764541a0b6c7340acd9aa3a5ac8e6e, type: 2}
-    - target: {fileID: 1899562012907376004, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
       propertyPath: playerOwned._variable
       value: 
       objectReference: {fileID: 11400000, guid: b539c2793b366f44c957347604f3e41b, type: 2}
@@ -323,6 +291,10 @@ PrefabInstance:
       propertyPath: _eventReference._event
       value: 
       objectReference: {fileID: 11400000, guid: 5ce67514be890a548bf9b9ae86178597, type: 2}
+    - target: {fileID: 4387967231437598519, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
+      propertyPath: _eventReference._event
+      value: 
+      objectReference: {fileID: 11400000, guid: 423d55c5d7066a2448fbb79282ebcdac, type: 2}
     - target: {fileID: 5230114706494583323, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
       propertyPath: _eventReference._variable
       value: 
@@ -355,5 +327,9 @@ PrefabInstance:
       propertyPath: m_PreserveAspect
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8513319907577084605, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
+      propertyPath: _eventReference._event
+      value: 
+      objectReference: {fileID: 11400000, guid: b56653adba4c70041a230318f2cfc21f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7643dc2b815b656468997064ddd4a767, type: 3}

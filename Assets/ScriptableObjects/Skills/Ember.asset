@@ -9,11 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bdd27fe62d9fea4e92440bb7709e65b, type: 3}
-  m_Name: Plant
+  m_Script: {fileID: 11500000, guid: 6abeeafa30df144408b293811b6d4645, type: 3}
+  m_Name: Ember
   m_EditorClassIdentifier: 
-  color: {r: 0.26666668, g: 0.7411765, b: 0.19607845, a: 1}
-  strongAgainst: []
-  weakAgainst:
+  image: {fileID: -3086054971276393745, guid: 993242dc3b453894695cc2accfa8ba01, type: 3}
+  description: 
+  duration: 0.5
+  types:
   - {fileID: 11400000, guid: fefaf6ee7c6c67749b4aa2d9504b446b, type: 2}
-  typeMultiplier: {fileID: 11400000, guid: 6633f7f6fd11277459b21c65acd1c4ad, type: 2}
+  basePower: 75
+  strengthMultiplier: 0.5
+  intelligenceMultiplier: 2.5
+  dexterityMultiplier: 0.5
+  constitutionMultiplier: 0.5

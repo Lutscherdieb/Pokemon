@@ -11,6 +11,14 @@ PrefabInstance:
       propertyPath: _eventReference._event
       value: 
       objectReference: {fileID: 11400000, guid: b06e0dcce00b6444da682f5767865229, type: 2}
+    - target: {fileID: 2131222175074007908, guid: ee43c7c6a9a783e4c8b2f0b350569938, type: 3}
+      propertyPath: _eventReference._variable
+      value: 
+      objectReference: {fileID: 11400000, guid: 3390efd453e38d34794ae6268ad75b2e, type: 2}
+    - target: {fileID: 2131222175074007908, guid: ee43c7c6a9a783e4c8b2f0b350569938, type: 3}
+      propertyPath: _replayEventBufferOnRegister
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2677918004295822062, guid: ee43c7c6a9a783e4c8b2f0b350569938, type: 3}
       propertyPath: _eventReference._event
       value: 

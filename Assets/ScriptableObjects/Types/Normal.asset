@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: Normal
   m_EditorClassIdentifier: 
   color: {r: 0.9607844, g: 0.96470594, b: 0.9803922, a: 1}
+  strongAgainst: []
+  weakAgainst: []
+  typeMultiplier: {fileID: 11400000, guid: 6633f7f6fd11277459b21c65acd1c4ad, type: 2}

@@ -41,6 +41,8 @@ namespace Lutscherdieb.Pokemon{
         [SerializeField] IntEvent CritEvent;
         [SerializeField] IntEvent ShieldDamaged;
         [SerializeField] IntEvent Blocked;
+        [SerializeField] UnitTypesPairEvent EffectiveAgainst;
+        [SerializeField] FloatEvent TypeReductionEvent;
         [Header("Constants")]
         [SerializeField] IntConstant ConstPerLevel;
         [SerializeField] IntConstant StrPerLevel;
@@ -52,17 +54,21 @@ namespace Lutscherdieb.Pokemon{
         [SerializeField] IntConstant ReductionPerArmour;
         [SerializeField] FloatConstant DodgePerDexterity;
         [SerializeField] FloatConstant CritChanceModifier;
+        [SerializeField] FloatConstant DamageRange;
+        [SerializeField] FloatConstant InitiativeModifier;
+        [SerializeField] FloatConstant CritMultiplier;
+        [SerializeField] IntConstant XpGainRate;
         [SerializeField] FloatConstant EnterAnimationDuration;
         [SerializeField] FloatConstant EnterAnimationOffset;
         [SerializeField] FloatConstant DeathAnimationDuration;
         [SerializeField] FloatConstant DeathAnimationOffset;
         [SerializeField] FloatConstant HitAnimationDuration;
-        [SerializeField] FloatConstant InitiativeModifier;
-        [SerializeField] FloatConstant CritMultiplier;
-        [SerializeField] IntConstant XpGainRate;
+        [SerializeField] FloatConstant AttackAnimationOffsetX;
+        [SerializeField] FloatConstant AttackAnimationOffsetY;
 
         progressPokemon progress;
         Image image;
+        Coroutine hitAnimation;
 
         public StringReference UnitName { get => unitName; set => unitName = value; }
         public SpriteReference Sprite { get => sprite; set => sprite = value; }
@@ -170,24 +176,45 @@ namespace Lutscherdieb.Pokemon{
         }
         public void PlayDeathAnimation(){
             if(playerOwned.Value){
-                transform.DOMoveY(DeathAnimationOffset.Value,DeathAnimationDuration.Value);
+                transform.DOLocalMoveY(transform.position.y - DeathAnimationOffset.Value,DeathAnimationDuration.Value);
             }else{
-                transform.DOMoveY(DeathAnimationOffset.Value,DeathAnimationDuration.Value);
+                transform.DOLocalMoveY(transform.position.y - DeathAnimationOffset.Value,DeathAnimationDuration.Value);
             }
             StartCoroutine(WaitForDestroy(DeathAnimationDuration.Value));
+        }
+        public void PlayAttackAnimation(Skill skill){
+            var sequenceX = DOTween.Sequence();
+            var sequenceY = DOTween.Sequence();
+            var originalPosition = transform.position;
+            if(playerOwned.Value){
+                sequenceX.Append(transform.DOLocalMoveX(originalPosition.x + AttackAnimationOffsetX.Value,skill.Duration/2));
+                sequenceY.Append(transform.DOLocalMoveY(originalPosition.y + AttackAnimationOffsetY.Value,skill.Duration/2));
+            }else{
+                sequenceX.Append(transform.DOLocalMoveX(originalPosition.x - AttackAnimationOffsetX.Value,skill.Duration/2));
+                sequenceY.Append(transform.DOLocalMoveY(originalPosition.y - AttackAnimationOffsetY.Value,skill.Duration/2));
+            }
+            sequenceX.Append(transform.DOLocalMoveX(originalPosition.x,skill.Duration/2));
+            sequenceY.Append(transform.DOLocalMoveY(originalPosition.y,skill.Duration/2));
         }
         IEnumerator WaitForDestroy(float delay){
             yield return new WaitForSeconds(delay);
             Destroy(gameObject);
         }
+        IEnumerator WaitForHitAnimation(float time){
+            yield return new WaitForSeconds(time);
+            hitAnimation = null;
+        }
         public void PlayHitAnimation(){
-            var originalColor = image.color;
-            image.color = Color.gray;
-            image.DOColor(originalColor,HitAnimationDuration.Value);
+            if(hitAnimation == null){
+                var originalColor = image.color;
+                image.color = Color.gray;
+                image.DOColor(originalColor,HitAnimationDuration.Value);
+                hitAnimation = StartCoroutine(WaitForHitAnimation(HitAnimationDuration.Value));
+            }
         }
         //------------
         public void DealDamage(int amount,Unit source,List<UnitTypes> types,bool canCrit = true,bool ignoreArmour = false,bool ignoreShield = false,bool ignoreDodge = false){
-            int damage = amount;
+            int damage = Mathf.FloorToInt(Random.Range(amount*(1-DamageRange.Value),amount*(1+DamageRange.Value)));
             bool dodged = false;
              if(!ignoreDodge){
                 dodged = Random.Range(0,100) <= dodge.Value;
@@ -195,6 +222,20 @@ namespace Lutscherdieb.Pokemon{
                     DodgedEvent.Raise(this);
                     return;
                 }
+             }
+             if(types.Count > 0 && unitTypes.Count > 0){
+                 float multiplier = 1f;
+                 foreach (var attackType in types){
+                     foreach (var defenderType in unitTypes){
+                         multiplier += attackType.GetDamageMultiplier(defenderType);
+                         var pair = new UnitTypesPair();
+                         pair.Item1 = attackType;
+                         pair.Item2 = defenderType;
+                         EffectiveAgainst.Raise(pair);
+                     }
+                 }
+                 damage = Mathf.FloorToInt(damage* multiplier);
+                 TypeReductionEvent.Raise(multiplier);
              }
              if(canCrit && source.CritChance > 0){
                  if(Random.Range(0,100) <= source.CritChance.Value){
