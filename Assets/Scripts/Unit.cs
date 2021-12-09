@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Net;
+using DG.Tweening;
 using Lutscherdieb.Pokemon;
 using UnityAtoms;
 using UnityAtoms.BaseAtoms;
 using UnityAtoms.Editor;
 using UnityEngine;
-
+using UnityEngine.UI;
 namespace Lutscherdieb.Pokemon{
+    [RequireComponent(typeof(Image))]
     public class Unit : MonoBehaviour{
         [Header("Variables")]
         [SerializeField] StringReference unitName;
@@ -30,6 +32,7 @@ namespace Lutscherdieb.Pokemon{
         [SerializeField] UnitTypesValueList unitTypes;
         [SerializeField] BuffValueList buffs;
         [SerializeField] SkillValueList skills;
+        [SerializeField] BoolReference playerOwned;
         [Header("Events")]
         [SerializeField] UnitEvent Spawn;
         [SerializeField] UnitEvent Destroyed;
@@ -49,11 +52,17 @@ namespace Lutscherdieb.Pokemon{
         [SerializeField] IntConstant ReductionPerArmour;
         [SerializeField] FloatConstant DodgePerDexterity;
         [SerializeField] FloatConstant CritChanceModifier;
+        [SerializeField] FloatConstant EnterAnimationDuration;
+        [SerializeField] FloatConstant EnterAnimationOffset;
+        [SerializeField] FloatConstant DeathAnimationDuration;
+        [SerializeField] FloatConstant DeathAnimationOffset;
+        [SerializeField] FloatConstant HitAnimationDuration;
         [SerializeField] FloatConstant InitiativeModifier;
         [SerializeField] FloatConstant CritMultiplier;
         [SerializeField] IntConstant XpGainRate;
 
         progressPokemon progress;
+        Image image;
 
         public StringReference UnitName { get => unitName; set => unitName = value; }
         public SpriteReference Sprite { get => sprite; set => sprite = value; }
@@ -75,14 +84,15 @@ namespace Lutscherdieb.Pokemon{
         public SkillValueList Skills { get => skills; set => skills = value; }
         public IntReference Initiatve { get => initiatve; set => initiatve = value; }
         public FloatReference CritChance { get => critChance; set => critChance = value; }
+        private void Awake() {
+            image = GetComponent<Image>();
+        }
 
         public void Init(progressPokemon progress,bool playerOwned) {
             this.progress = progress;
             level.Value = progress.Level;
-            CalculateConstitution();
-            CalculateDexterity();
-            CalculateIntelligence();
-            CalculateStrength();
+            this.playerOwned.Value = playerOwned;
+            
             
             
             unitName.Value = progress.name;
@@ -110,6 +120,7 @@ namespace Lutscherdieb.Pokemon{
             Spawn.Raise(this);
             
         }
+
         public void CalculateMaxLife(){
             maxHp.Value = constitution.Value * MaxLifePerConst.Value;
         }
@@ -146,6 +157,33 @@ namespace Lutscherdieb.Pokemon{
         public void LevelUp(){
             level.Value += 1;
             xp.Value -= maxXp.Value;
+        }
+        //-- Animations--//
+        public void PlayEnterAnimation(){
+            var originalPosition = transform.position;
+            if(playerOwned.Value){
+                transform.position += new Vector3(-EnterAnimationOffset.Value,0,0);
+            }else{
+                transform.position += new Vector3(EnterAnimationOffset.Value,0,0);
+            }
+            transform.DOMoveX(originalPosition.x,EnterAnimationDuration.Value);
+        }
+        public void PlayDeathAnimation(){
+            if(playerOwned.Value){
+                transform.DOMoveY(DeathAnimationOffset.Value,DeathAnimationDuration.Value);
+            }else{
+                transform.DOMoveY(DeathAnimationOffset.Value,DeathAnimationDuration.Value);
+            }
+            StartCoroutine(WaitForDestroy(DeathAnimationDuration.Value));
+        }
+        IEnumerator WaitForDestroy(float delay){
+            yield return new WaitForSeconds(delay);
+            Destroy(gameObject);
+        }
+        public void PlayHitAnimation(){
+            var originalColor = image.color;
+            image.color = Color.gray;
+            image.DOColor(originalColor,HitAnimationDuration.Value);
         }
         //------------
         public void DealDamage(int amount,Unit source,List<UnitTypes> types,bool canCrit = true,bool ignoreArmour = false,bool ignoreShield = false,bool ignoreDodge = false){

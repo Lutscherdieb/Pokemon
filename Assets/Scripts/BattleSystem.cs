@@ -54,12 +54,12 @@ namespace Lutscherdieb.Pokemon{
             }
         }
         public void PlayerUseSkill(Skill skill){
-            if(playerTurn.Value && skillCoroutine == null){
+            if(playerTurn.Value && skillCoroutine == null && playerUnit.Value.Hp > 0){
                 skillCoroutine = StartCoroutine(PlayerUseSkillCoroutine(skill));
             }
         }
         public void EnemyUseSkill(Skill skill){
-            if(!playerTurn.Value && skillCoroutine == null){
+            if(!playerTurn.Value && skillCoroutine == null && enemyUnit.Value.Hp > 0){
                 skillCoroutine = StartCoroutine(EnemyUseSkillCoroutine(skill));
             }
         }
