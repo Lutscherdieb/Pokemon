@@ -1,0 +1,648 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7358092460877913850
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1500036812376899722}
+  - component: {fileID: 594043648060277823}
+  - component: {fileID: 8279277694428516788}
+  - component: {fileID: 1899562012907376004}
+  - component: {fileID: -7209406692779565735}
+  - component: {fileID: -9155515228777453573}
+  - component: {fileID: 1083679728939606691}
+  - component: {fileID: -7044770419421641117}
+  - component: {fileID: -3371167792470269935}
+  - component: {fileID: 5230114706494583323}
+  - component: {fileID: 6863751580663570754}
+  - component: {fileID: 7072582070108415491}
+  - component: {fileID: 1921530389296862540}
+  m_Layer: 0
+  m_Name: Unit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1500036812376899722
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7358092460877913850}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 200, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &594043648060277823
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7358092460877913850}
+  m_CullTransparentMesh: 1
+--- !u!114 &8279277694428516788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7358092460877913850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ed8e1d9976a1fd94d961840d8f6e7764, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1899562012907376004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7358092460877913850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b7e9a9c6cfb53429ddfd47de5ff321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitName:
+    _usage: 2
+    _value: 
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: db534d8c01b7eb448837d84d3b15b271, type: 2}
+    _variableInstancer: {fileID: 0}
+  sprite:
+    _usage: 2
+    _value: {fileID: 0}
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 5f5f78339d7a31c40af4fd260816f602, type: 2}
+    _variableInstancer: {fileID: 0}
+  hp:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 2b44cbf0b700ca84ebcec913112d98fe, type: 2}
+    _variableInstancer: {fileID: 0}
+  maxHp:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: aad70dfdf6bf3f943958a65058202f4f, type: 2}
+    _variableInstancer: {fileID: 0}
+  xp:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: c942c18da38750542be730152eb83ef3, type: 2}
+    _variableInstancer: {fileID: 0}
+  maxXp:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 4ada0010a6b787049abbac0e06c97616, type: 2}
+    _variableInstancer: {fileID: 0}
+  level:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 828cbc643cb945740b147bf9c24ca4e3, type: 2}
+    _variableInstancer: {fileID: 0}
+  shield:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: b503385d3b213ac42959cbea945caea7, type: 2}
+    _variableInstancer: {fileID: 0}
+  maxShield:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 2ce8fe4c146673a4f91cbbaa45423f63, type: 2}
+    _variableInstancer: {fileID: 0}
+  armour:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 8377f2a9b0c98ef41b454b8206b15c18, type: 2}
+    _variableInstancer: {fileID: 0}
+  dodge:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 6a14e7f78e40acc40ad581f672f2778d, type: 2}
+    _variableInstancer: {fileID: 0}
+  constitution:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 170438aa5d5457e43801cb2e91e53a1a, type: 2}
+    _variableInstancer: {fileID: 0}
+  strength:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 0f61f71bb0e6796489d886ded6c8b0b0, type: 2}
+    _variableInstancer: {fileID: 0}
+  intelligence:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 77ee23cbac5d9404a9a45f4824c0b527, type: 2}
+    _variableInstancer: {fileID: 0}
+  dexterity:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 765729cd1cdfea0468fd5d071de22d5e, type: 2}
+    _variableInstancer: {fileID: 0}
+  initiatve:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: d11192ac7f374044192bec28e7d8740f, type: 2}
+    _variableInstancer: {fileID: 0}
+  critChance:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 5700f727b6b66c644a7f33b522c2ec42, type: 2}
+    _variableInstancer: {fileID: 0}
+  unitTypes: {fileID: 11400000, guid: 212f44f34e89a9540b825f208bf6f1a5, type: 2}
+  buffs: {fileID: 11400000, guid: 9e29f7dbdcb069e4f97ed0c9ff00e2ed, type: 2}
+  skills: {fileID: 11400000, guid: 75f74c8b84238144cb59e5408e43f72c, type: 2}
+  Spawn: {fileID: 11400000, guid: 96313ef3bce14174b871a5b268efa45e, type: 2}
+  Destroyed: {fileID: 11400000, guid: 2510b8d1a40423e4d8d015714ef0a707, type: 2}
+  DodgedEvent: {fileID: 11400000, guid: da0c627d707f26240a4c1afede642c60, type: 2}
+  Damaged: {fileID: 11400000, guid: 4026ef769bfef1f44a52c43bb7c061cf, type: 2}
+  CritEvent: {fileID: 11400000, guid: 82b312629f096e349aac2ce8156c2338, type: 2}
+  ShieldDamaged: {fileID: 11400000, guid: 9ff17b9d9174c0841add77c79a77b4b5, type: 2}
+  Blocked: {fileID: 11400000, guid: 330f011745dbb9a48a08ce50879f2097, type: 2}
+  ConstPerLevel: {fileID: 11400000, guid: 48f968a39e4d8044ab83ba895b9415db, type: 2}
+  StrPerLevel: {fileID: 11400000, guid: a0a6c80d41d4825489857c4655c764e7, type: 2}
+  IntPerLevel: {fileID: 11400000, guid: b1b14a820faa0dd44836172731240557, type: 2}
+  DexPerLevel: {fileID: 11400000, guid: afe1bd0d861a62e49982934308d2cb12, type: 2}
+  MaxLifePerConst: {fileID: 11400000, guid: 0d48a4878116d4c48abad0a1257b658e, type: 2}
+  ShieldPerIntelligence: {fileID: 11400000, guid: f4764541a0b6c7340acd9aa3a5ac8e6e, type: 2}
+  ArmourPerStrength: {fileID: 11400000, guid: f51945e83e0193148bace0fc6bd37285, type: 2}
+  ReductionPerArmour: {fileID: 11400000, guid: c2878b29c03ef2340b62302f69ddc17b, type: 2}
+  DodgePerDexterity: {fileID: 11400000, guid: 30fdc525679cf8b45b39acff933a4013, type: 2}
+  CritChanceModifier: {fileID: 11400000, guid: c2988ab18bf8d664a8a73697f353f382, type: 2}
+  InitiativeModifier: {fileID: 11400000, guid: cc82d1b9ee5f6344fa44a2ef147a4269, type: 2}
+  CritMultiplier: {fileID: 11400000, guid: 9a80f11ca085c8840a69ad6d753580eb, type: 2}
+  XpGainRate: {fileID: 11400000, guid: 6f591032d60397f479e2599998999660, type: 2}
+--- !u!114 &-7209406692779565735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7358092460877913850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050ff37b5550f4b7e9bdf8b985aff484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _developerDescription: 'Constitution changed: -Calculate maxHp'
+  _unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1899562012907376004}
+        m_TargetAssemblyTypeName: Unit, Assembly-CSharp
+        m_MethodName: CalculateMaxLife
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionResponses: []
+  _conditions: []
+  _operator: 0
+  _replayEventBufferOnRegister: 0
+  _eventReference:
+    _usage: 2
+    _event: {fileID: 11400000, guid: 6ce567c573d509449ad950925ccd650b, type: 2}
+    _eventInstancer: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 170438aa5d5457e43801cb2e91e53a1a, type: 2}
+    _variableInstancer: {fileID: 0}
+--- !u!114 &-9155515228777453573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7358092460877913850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050ff37b5550f4b7e9bdf8b985aff484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _developerDescription: 'Level Changed: -Calculate Constitution,Dexterity,Strength,Intelligence,MaxXp'
+  _unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1899562012907376004}
+        m_TargetAssemblyTypeName: Unit, Assembly-CSharp
+        m_MethodName: CalculateConstitution
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1899562012907376004}
+        m_TargetAssemblyTypeName: Unit, Assembly-CSharp
+        m_MethodName: CalculateDexterity
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1899562012907376004}
+        m_TargetAssemblyTypeName: Unit, Assembly-CSharp
+        m_MethodName: CalculateStrength
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1899562012907376004}
+        m_TargetAssemblyTypeName: Unit, Assembly-CSharp
+        m_MethodName: CalculateIntelligence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1899562012907376004}
+        m_TargetAssemblyTypeName: Unit, Assembly-CSharp
+        m_MethodName: CalculateMaxXp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionResponses: []
+  _conditions: []
+  _operator: 0
+  _replayEventBufferOnRegister: 0
+  _eventReference:
+    _usage: 2
+    _event: {fileID: 11400000, guid: b6405059ea52aac4785653a2c71c18e7, type: 2}
+    _eventInstancer: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 828cbc643cb945740b147bf9c24ca4e3, type: 2}
+    _variableInstancer: {fileID: 0}
+--- !u!114 &1083679728939606691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7358092460877913850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2458933140c54c9db0aec7a69c1b617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _developerDescription: 'Level Up Event: -Level Up'
+  _unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1899562012907376004}
+        m_TargetAssemblyTypeName: Unit, Assembly-CSharp
+        m_MethodName: LevelUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionResponses: []
+  _conditions: []
+  _operator: 0
+  _replayEventBufferOnRegister: 1
+  _eventReference:
+    _usage: 0
+    _event: {fileID: 11400000, guid: 4882f61be00b35e479d47f9b03f50e73, type: 2}
+    _eventInstancer: {fileID: 0}
+    _collection: {fileID: 0}
+    _list: {fileID: 0}
+    _collectionInstancer: {fileID: 0}
+    _listInstancer: {fileID: 0}
+--- !u!95 &-7044770419421641117
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7358092460877913850}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 84017804f92723d4cae7f8cba70ef590, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-3371167792470269935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7358092460877913850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050ff37b5550f4b7e9bdf8b985aff484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _developerDescription: 'Intelligence changed: -Calculate MaxShield, Calculate Initiative(DEX
+    + INT)'
+  _unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1899562012907376004}
+        m_TargetAssemblyTypeName: Unit, Assembly-CSharp
+        m_MethodName: CalculateMaxShield
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1899562012907376004}
+        m_TargetAssemblyTypeName: Lutscherdieb.Pokemon.Unit, Assembly-CSharp
+        m_MethodName: CalculateInitiative
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionResponses: []
+  _conditions: []
+  _operator: 0
+  _replayEventBufferOnRegister: 0
+  _eventReference:
+    _usage: 2
+    _event: {fileID: 0}
+    _eventInstancer: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 77ee23cbac5d9404a9a45f4824c0b527, type: 2}
+    _variableInstancer: {fileID: 0}
+--- !u!114 &5230114706494583323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7358092460877913850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050ff37b5550f4b7e9bdf8b985aff484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _developerDescription: 'Strength changed: -Calculate Armour, CritChance'
+  _unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1899562012907376004}
+        m_TargetAssemblyTypeName: Unit, Assembly-CSharp
+        m_MethodName: CalculateArmour
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1899562012907376004}
+        m_TargetAssemblyTypeName: Lutscherdieb.Pokemon.Unit, Assembly-CSharp
+        m_MethodName: CalculateCritChance
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionResponses: []
+  _conditions: []
+  _operator: 0
+  _replayEventBufferOnRegister: 0
+  _eventReference:
+    _usage: 2
+    _event: {fileID: 0}
+    _eventInstancer: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 0f61f71bb0e6796489d886ded6c8b0b0, type: 2}
+    _variableInstancer: {fileID: 0}
+--- !u!114 &6863751580663570754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7358092460877913850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050ff37b5550f4b7e9bdf8b985aff484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _developerDescription: 'Dexterity changed: -Calculate Evasion,Initiative,CritChance'
+  _unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1899562012907376004}
+        m_TargetAssemblyTypeName: Unit, Assembly-CSharp
+        m_MethodName: CalculateEvasion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1899562012907376004}
+        m_TargetAssemblyTypeName: Lutscherdieb.Pokemon.Unit, Assembly-CSharp
+        m_MethodName: CalculateInitiative
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1899562012907376004}
+        m_TargetAssemblyTypeName: Lutscherdieb.Pokemon.Unit, Assembly-CSharp
+        m_MethodName: CalculateCritChance
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionResponses: []
+  _conditions: []
+  _operator: 0
+  _replayEventBufferOnRegister: 0
+  _eventReference:
+    _usage: 2
+    _event: {fileID: 0}
+    _eventInstancer: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 765729cd1cdfea0468fd5d071de22d5e, type: 2}
+    _variableInstancer: {fileID: 0}
+--- !u!114 &7072582070108415491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7358092460877913850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 909482a799c889949996618c669b5974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _developerDescription: 'Image changed: -Set Image'
+  _unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8279277694428516788}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+        m_MethodName: set_sprite
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionResponses: []
+  _conditions: []
+  _operator: 0
+  _replayEventBufferOnRegister: 0
+  _eventReference:
+    _usage: 0
+    _event: {fileID: 11400000, guid: 5044543c8c0a2f1488fcfc8150c83f7f, type: 2}
+    _eventInstancer: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 5f5f78339d7a31c40af4fd260816f602, type: 2}
+    _variableInstancer: {fileID: 0}
+--- !u!114 &1921530389296862540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7358092460877913850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2458933140c54c9db0aec7a69c1b617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _developerDescription: 'Death: Trigger -(Death Animation & Destroy after)'
+  _unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -7044770419421641117}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Death
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionResponses: []
+  _conditions: []
+  _operator: 0
+  _replayEventBufferOnRegister: 0
+  _eventReference:
+    _usage: 0
+    _event: {fileID: 11400000, guid: 05b1d529d198d3a499e47fcbcb42edea, type: 2}
+    _eventInstancer: {fileID: 0}
+    _collection: {fileID: 0}
+    _list: {fileID: 0}
+    _collectionInstancer: {fileID: 0}
+    _listInstancer: {fileID: 0}

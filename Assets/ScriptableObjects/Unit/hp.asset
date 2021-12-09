@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf8a67b68db3d4650908f8cf6adeda60, type: 3}
+  m_Name: hp
+  m_EditorClassIdentifier: 
+  _developerDescription: 
+  _id: 
+  _value: 92
+  _changed: {fileID: 11400000, guid: 0ab88a32985948b41b982a9a0f93189e, type: 2}
+  _changedWithHistory: {fileID: 0}
+  _triggerChangedOnOnEnable: 0
+  _triggerChangedWithHistoryOnOnEnable: 0
+  _oldValue: 58
+  _initialValue: 58
+  _preChangeTransformers:
+  - {fileID: 11400000, guid: 52bd88a7ffa95524693ef9b4cdb18eeb, type: 2}
+  - {fileID: 11400000, guid: 15c23ee9ecfc72243a736b64853a9938, type: 2}
