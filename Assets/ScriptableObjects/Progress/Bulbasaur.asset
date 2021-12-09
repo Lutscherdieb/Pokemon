@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Bulbasaur
   m_EditorClassIdentifier: 
   basePokemon: {fileID: 11400000, guid: 4cea073183eedd648bd960a32cb87b54, type: 2}
-  hp: 0
-  xp: 0
+  hp: 197
+  xp: 241
   level: 99
   shield: 0
   skills:
   - {fileID: 11400000, guid: 62e0fedadd77a4c4d9beac59de1b2961, type: 2}
+  - {fileID: 11400000, guid: 67135589dcaee984183922e4e87f9d24, type: 2}
