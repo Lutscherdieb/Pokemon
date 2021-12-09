@@ -13,3 +13,7 @@ MonoBehaviour:
   m_Name: Fire
   m_EditorClassIdentifier: 
   color: {r: 0.7607844, g: 0.21176472, b: 0.08627451, a: 1}
+  strongAgainst:
+  - {fileID: 11400000, guid: fd6824ff75ae5064fbbf0d3d10012ed8, type: 2}
+  weakAgainst: []
+  typeMultiplier: {fileID: 11400000, guid: 6633f7f6fd11277459b21c65acd1c4ad, type: 2}

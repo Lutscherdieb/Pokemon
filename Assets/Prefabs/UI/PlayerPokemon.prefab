@@ -49,6 +49,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6401019535207019484}
+  - component: {fileID: 2131222175074007908}
   m_Layer: 5
   m_Name: PlayerPokemon
   m_TagString: Untagged
@@ -76,6 +77,44 @@ RectTransform:
   m_AnchoredPosition: {x: -192.2, y: -137}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2131222175074007908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6401019535207019487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6ab7cbc45164d19b20476265c251c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _developerDescription: 
+  _unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6401019534299573889}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionResponses: []
+  _conditions: []
+  _operator: 0
+  _replayEventBufferOnRegister: 1
+  _eventReference:
+    _usage: 2
+    _event: {fileID: 11400000, guid: 85ae4be37faf7dd4f831ad2eb052ae3b, type: 2}
+    _eventInstancer: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 2902002a4bcdf2f4d9eb8ff776c88264, type: 2}
+    _variableInstancer: {fileID: 0}
 --- !u!1001 &1462247945385153190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -250,7 +289,7 @@ MonoBehaviour:
   _actionResponses: []
   _conditions: []
   _operator: 0
-  _replayEventBufferOnRegister: 1
+  _replayEventBufferOnRegister: 0
   _eventReference:
     _usage: 0
     _event: {fileID: 11400000, guid: 9ff17b9d9174c0841add77c79a77b4b5, type: 2}
@@ -427,7 +466,7 @@ MonoBehaviour:
   _actionResponses: []
   _conditions: []
   _operator: 0
-  _replayEventBufferOnRegister: 1
+  _replayEventBufferOnRegister: 0
   _eventReference:
     _usage: 0
     _event: {fileID: 11400000, guid: 330f011745dbb9a48a08ce50879f2097, type: 2}
@@ -608,7 +647,7 @@ MonoBehaviour:
   _actionResponses: []
   _conditions: []
   _operator: 0
-  _replayEventBufferOnRegister: 1
+  _replayEventBufferOnRegister: 0
   _eventReference:
     _usage: 0
     _event: {fileID: 11400000, guid: 82b312629f096e349aac2ce8156c2338, type: 2}
@@ -789,7 +828,7 @@ MonoBehaviour:
   _actionResponses: []
   _conditions: []
   _operator: 0
-  _replayEventBufferOnRegister: 1
+  _replayEventBufferOnRegister: 0
   _eventReference:
     _usage: 0
     _event: {fileID: 11400000, guid: 4026ef769bfef1f44a52c43bb7c061cf, type: 2}
@@ -889,6 +928,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1160289910334597447, guid: f45958664e5359d4086e7aea1ba37e03, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5338044281241779817, guid: f45958664e5359d4086e7aea1ba37e03, type: 3}
+      propertyPath: _replayEventBufferOnRegister
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7550479794906066946, guid: f45958664e5359d4086e7aea1ba37e03, type: 3}

@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 1921530389296862540}
   - component: {fileID: -5819691664832478936}
   - component: {fileID: 5658308024089884009}
+  - component: {fileID: 4387967231437598519}
+  - component: {fileID: 8513319907577084605}
   m_Layer: 0
   m_Name: Unit
   m_TagString: Untagged
@@ -216,6 +218,8 @@ MonoBehaviour:
   CritEvent: {fileID: 11400000, guid: 82b312629f096e349aac2ce8156c2338, type: 2}
   ShieldDamaged: {fileID: 11400000, guid: 9ff17b9d9174c0841add77c79a77b4b5, type: 2}
   Blocked: {fileID: 11400000, guid: 330f011745dbb9a48a08ce50879f2097, type: 2}
+  EffectiveAgainst: {fileID: 11400000, guid: 5a6a998583f5f5c4ca9236b52bc4529c, type: 2}
+  TypeReductionEvent: {fileID: 11400000, guid: 1331739d1dea35f40915c80e7386156e, type: 2}
   ConstPerLevel: {fileID: 11400000, guid: 48f968a39e4d8044ab83ba895b9415db, type: 2}
   StrPerLevel: {fileID: 11400000, guid: a0a6c80d41d4825489857c4655c764e7, type: 2}
   IntPerLevel: {fileID: 11400000, guid: b1b14a820faa0dd44836172731240557, type: 2}
@@ -226,14 +230,17 @@ MonoBehaviour:
   ReductionPerArmour: {fileID: 11400000, guid: c2878b29c03ef2340b62302f69ddc17b, type: 2}
   DodgePerDexterity: {fileID: 11400000, guid: 30fdc525679cf8b45b39acff933a4013, type: 2}
   CritChanceModifier: {fileID: 11400000, guid: c2988ab18bf8d664a8a73697f353f382, type: 2}
+  DamageRange: {fileID: 11400000, guid: c6fe791701ab25a4da9978dea8ffc90a, type: 2}
+  InitiativeModifier: {fileID: 11400000, guid: cc82d1b9ee5f6344fa44a2ef147a4269, type: 2}
+  CritMultiplier: {fileID: 11400000, guid: 9a80f11ca085c8840a69ad6d753580eb, type: 2}
+  XpGainRate: {fileID: 11400000, guid: 6f591032d60397f479e2599998999660, type: 2}
   EnterAnimationDuration: {fileID: 11400000, guid: 9f019384e21a299498749cc16270c75c, type: 2}
   EnterAnimationOffset: {fileID: 11400000, guid: 08401e05d59ef92439748569bb9cdaed, type: 2}
   DeathAnimationDuration: {fileID: 11400000, guid: a3c4ed5186f873640b1b5a2a31d3e686, type: 2}
   DeathAnimationOffset: {fileID: 11400000, guid: c38d7b9fe459d28469de0e151fe3482b, type: 2}
   HitAnimationDuration: {fileID: 11400000, guid: d868fb4a58099944c98e5c212db4c053, type: 2}
-  InitiativeModifier: {fileID: 11400000, guid: cc82d1b9ee5f6344fa44a2ef147a4269, type: 2}
-  CritMultiplier: {fileID: 11400000, guid: 9a80f11ca085c8840a69ad6d753580eb, type: 2}
-  XpGainRate: {fileID: 11400000, guid: 6f591032d60397f479e2599998999660, type: 2}
+  AttackAnimationOffsetX: {fileID: 11400000, guid: f2c34bbb9b99db84c8ed96fddee22be2, type: 2}
+  AttackAnimationOffsetY: {fileID: 11400000, guid: e7e37b3c8bdd2754bad5a596d1a683bd, type: 2}
 --- !u!114 &-7209406692779565735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -712,6 +719,82 @@ MonoBehaviour:
   _eventReference:
     _usage: 0
     _event: {fileID: 11400000, guid: 4026ef769bfef1f44a52c43bb7c061cf, type: 2}
+    _eventInstancer: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
+--- !u!114 &4387967231437598519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7358092460877913850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7de18186ba5a33343ac7dd61d7971977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _developerDescription: 
+  _unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1899562012907376004}
+        m_TargetAssemblyTypeName: Lutscherdieb.Pokemon.Unit, Assembly-CSharp
+        m_MethodName: PlayAttackAnimation
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionResponses: []
+  _conditions: []
+  _operator: 0
+  _replayEventBufferOnRegister: 0
+  _eventReference:
+    _usage: 0
+    _event: {fileID: 11400000, guid: 6cd0e79abf171e94a807fab0ff7baab1, type: 2}
+    _eventInstancer: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
+--- !u!114 &8513319907577084605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7358092460877913850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050ff37b5550f4b7e9bdf8b985aff484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _developerDescription: 
+  _unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1899562012907376004}
+        m_TargetAssemblyTypeName: Lutscherdieb.Pokemon.Unit, Assembly-CSharp
+        m_MethodName: PlayHitAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionResponses: []
+  _conditions: []
+  _operator: 0
+  _replayEventBufferOnRegister: 1
+  _eventReference:
+    _usage: 0
+    _event: {fileID: 11400000, guid: 9ff17b9d9174c0841add77c79a77b4b5, type: 2}
     _eventInstancer: {fileID: 0}
     _variable: {fileID: 0}
     _variableInstancer: {fileID: 0}

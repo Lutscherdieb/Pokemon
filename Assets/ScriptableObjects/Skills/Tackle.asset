@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 5358339777047750641, guid: cb3a56e86b2bb9c4991509ad74cde6ad, type: 3}
   description: 
+  duration: 0.5
   types:
   - {fileID: 11400000, guid: 629b1b9925ffea44ab18755b28610fc5, type: 2}
   basePower: 25

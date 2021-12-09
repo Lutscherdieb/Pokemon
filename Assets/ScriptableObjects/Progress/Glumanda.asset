@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bf4713ff095d5541954a29529a31045, type: 3}
-  m_Name: Bulbasaur
+  m_Name: Glumanda
   m_EditorClassIdentifier: 
-  basePokemon: {fileID: 11400000, guid: 4cea073183eedd648bd960a32cb87b54, type: 2}
-  hp: 197
+  basePokemon: {fileID: 11400000, guid: 0442b59f34fbb2c4594c4c978d0a336c, type: 2}
+  hp: 178
   xp: 241
   level: 99
-  shield: 0
+  shield: 309
   skills:
   - {fileID: 11400000, guid: 62e0fedadd77a4c4d9beac59de1b2961, type: 2}
   - {fileID: 11400000, guid: 67135589dcaee984183922e4e87f9d24, type: 2}
+  - {fileID: 11400000, guid: 086b24d962e6b424784bfcc816f79732, type: 2}
