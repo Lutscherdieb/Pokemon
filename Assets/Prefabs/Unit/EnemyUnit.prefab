@@ -27,6 +27,10 @@ PrefabInstance:
       propertyPath: _eventReference._event
       value: 
       objectReference: {fileID: 11400000, guid: b06e0dcce00b6444da682f5767865229, type: 2}
+    - target: {fileID: 882524364787727611, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
+      propertyPath: _replayEventBufferOnRegister
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1083679728939606691, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
       propertyPath: _eventReference._event
       value: 
