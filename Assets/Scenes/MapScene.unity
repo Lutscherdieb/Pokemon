@@ -249,10 +249,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 455960046}
   - {fileID: 618555722}
-  - {fileID: 1721051734}
   - {fileID: 447655656}
+  - {fileID: 455960046}
+  - {fileID: 1721051734}
   - {fileID: 278410492}
   - {fileID: 1949825108}
   m_Father: {fileID: 404354583}
@@ -7991,7 +7991,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2700948517341300611, guid: 9bd439169586e214ca5dacd3407ad84a, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2700948517341300611, guid: 9bd439169586e214ca5dacd3407ad84a, type: 3}
       propertyPath: m_AnchorMax.x
@@ -8570,7 +8570,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7283095701394542103, guid: a39da195ba94a8348afa94abc1f0ea9e, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7283095701394542103, guid: a39da195ba94a8348afa94abc1f0ea9e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -11522,8 +11522,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2102720274}
-  - component: {fileID: 2102720276}
   - component: {fileID: 2102720275}
+  - component: {fileID: 2102720276}
   m_Layer: 0
   m_Name: EnemyKI
   m_TagString: Untagged
@@ -11578,7 +11578,7 @@ MonoBehaviour:
       - m_Target: {fileID: 2102720275}
         m_TargetAssemblyTypeName: BattleKI, Assembly-CSharp
         m_MethodName: RandomMove
-        m_Mode: 0
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11588,7 +11588,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _actionResponses: []
-  _conditions: []
+  _conditions:
+  - {fileID: 11400000, guid: f3ffb41af3ef6c044a7f7429d4031700, type: 2}
   _operator: 0
   _replayEventBufferOnRegister: 0
   _eventReference:
@@ -11911,7 +11912,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6401019535207019484, guid: ee43c7c6a9a783e4c8b2f0b350569938, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6401019535207019484, guid: ee43c7c6a9a783e4c8b2f0b350569938, type: 3}
       propertyPath: m_AnchorMax.x
@@ -12012,7 +12013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 183506897488244014, guid: d98635290890db546b84f41e3bf25b0c, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 183506897488244014, guid: d98635290890db546b84f41e3bf25b0c, type: 3}
       propertyPath: m_AnchorMax.x

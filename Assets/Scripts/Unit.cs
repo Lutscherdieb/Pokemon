@@ -196,7 +196,7 @@ namespace Lutscherdieb.Pokemon{
             }
         }
         public void PlayAttackAnimation(Skill skill){
-            if(!isAnimatingAttack.Value){
+            if(!isAnimatingAttack.Value && !isAnimatingDeath.Value){
                 var sequenceX = DOTween.Sequence();
                 var sequenceY = DOTween.Sequence();
                 var originalPosition = transform.position;
@@ -319,6 +319,8 @@ namespace Lutscherdieb.Pokemon{
                 SaveXP();
                 SaveShield();
             }
+            DOTween.Kill(transform);
+            DOTween.Kill(image);
             Destroyed.Raise(this);
         }
     }
