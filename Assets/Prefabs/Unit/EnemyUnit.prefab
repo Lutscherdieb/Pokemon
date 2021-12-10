@@ -23,6 +23,10 @@ PrefabInstance:
       propertyPath: _eventReference._variable
       value: 
       objectReference: {fileID: 11400000, guid: dca04d58d8273a240a8a749198701a95, type: 2}
+    - target: {fileID: 882524364787727611, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
+      propertyPath: _eventReference._event
+      value: 
+      objectReference: {fileID: 11400000, guid: b06e0dcce00b6444da682f5767865229, type: 2}
     - target: {fileID: 1083679728939606691, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
       propertyPath: _eventReference._event
       value: 
@@ -287,6 +291,38 @@ PrefabInstance:
       propertyPath: intelligence._variable
       value: 
       objectReference: {fileID: 11400000, guid: dca04d58d8273a240a8a749198701a95, type: 2}
+    - target: {fileID: 1899562012907376004, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
+      propertyPath: isAnimatingDeath._usage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899562012907376004, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
+      propertyPath: isAnimatingDodge._usage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899562012907376004, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
+      propertyPath: isAnimatingAttack._usage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899562012907376004, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
+      propertyPath: isAnimatingHit._variable
+      value: 
+      objectReference: {fileID: 11400000, guid: 3f20ff78c6931c74c9139e8ed292071a, type: 2}
+    - target: {fileID: 1899562012907376004, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
+      propertyPath: isAnimatingDeath._variable
+      value: 
+      objectReference: {fileID: 11400000, guid: e92003d83f866da40ae6ee753c923b79, type: 2}
+    - target: {fileID: 1899562012907376004, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
+      propertyPath: isAnimatingDodge._variable
+      value: 
+      objectReference: {fileID: 11400000, guid: b44b20d0cc8dede42aaf523dba59f697, type: 2}
+    - target: {fileID: 1899562012907376004, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
+      propertyPath: isAnimatingEnter._variable
+      value: 
+      objectReference: {fileID: 11400000, guid: 4cab0a173f66dc74a80b5d98aff599f2, type: 2}
+    - target: {fileID: 1899562012907376004, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
+      propertyPath: isAnimatingAttack._variable
+      value: 
+      objectReference: {fileID: 11400000, guid: db929118879700f46aaf5863653d900c, type: 2}
     - target: {fileID: 1921530389296862540, guid: 7643dc2b815b656468997064ddd4a767, type: 3}
       propertyPath: _eventReference._event
       value: 

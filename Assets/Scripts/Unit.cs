@@ -33,6 +33,11 @@ namespace Lutscherdieb.Pokemon{
         [SerializeField] BuffValueList buffs;
         [SerializeField] SkillValueList skills;
         [SerializeField] BoolReference playerOwned;
+        [SerializeField] BoolReference isAnimatingDodge;
+        [SerializeField] BoolReference isAnimatingDeath;
+        [SerializeField] BoolReference isAnimatingAttack;
+        [SerializeField] BoolReference isAnimatingHit;
+        [SerializeField] BoolReference isAnimatingEnter;
         [Header("Events")]
         [SerializeField] UnitEvent Spawn;
         [SerializeField] UnitEvent Destroyed;
@@ -65,11 +70,13 @@ namespace Lutscherdieb.Pokemon{
         [SerializeField] FloatConstant HitAnimationDuration;
         [SerializeField] FloatConstant AttackAnimationOffsetX;
         [SerializeField] FloatConstant AttackAnimationOffsetY;
-
+        [SerializeField] FloatConstant DodgeAnimationOffset;
+        [SerializeField] FloatConstant DodgeAnimationDuration;
+        // Internal 
         progressPokemon progress;
         Image image;
-        Coroutine hitAnimation;
-
+        
+        //Properties
         public StringReference UnitName { get => unitName; set => unitName = value; }
         public SpriteReference Sprite { get => sprite; set => sprite = value; }
         public IntReference Hp { get => hp; set => hp = value; }
@@ -166,51 +173,71 @@ namespace Lutscherdieb.Pokemon{
         }
         //-- Animations--//
         public void PlayEnterAnimation(){
-            var originalPosition = transform.position;
-            if(playerOwned.Value){
-                transform.position += new Vector3(-EnterAnimationOffset.Value,0,0);
-            }else{
-                transform.position += new Vector3(EnterAnimationOffset.Value,0,0);
+            if(!isAnimatingEnter){
+                var originalPosition = transform.position;
+                if(playerOwned.Value){
+                    transform.position += new Vector3(-EnterAnimationOffset.Value,0,0);
+                }else{
+                    transform.position += new Vector3(EnterAnimationOffset.Value,0,0);
+                }
+                transform.DOMoveX(originalPosition.x,EnterAnimationDuration.Value);
+                StartCoroutine(WaitForAnimation(isAnimatingEnter,EnterAnimationDuration.Value));
             }
-            transform.DOMoveX(originalPosition.x,EnterAnimationDuration.Value);
         }
         public void PlayDeathAnimation(){
-            if(playerOwned.Value){
-                transform.DOLocalMoveY(transform.position.y - DeathAnimationOffset.Value,DeathAnimationDuration.Value);
-            }else{
-                transform.DOLocalMoveY(transform.position.y - DeathAnimationOffset.Value,DeathAnimationDuration.Value);
+            if(!isAnimatingDeath.Value){
+                if(playerOwned.Value){
+                    transform.DOLocalMoveY(transform.position.y - DeathAnimationOffset.Value,DeathAnimationDuration.Value);
+                }else{
+                    transform.DOLocalMoveY(transform.position.y - DeathAnimationOffset.Value,DeathAnimationDuration.Value);
+                }
+                Destroy(gameObject,DeathAnimationDuration.Value);
+                StartCoroutine(WaitForAnimation(isAnimatingDeath,DeathAnimationDuration.Value));
             }
-            StartCoroutine(WaitForDestroy(DeathAnimationDuration.Value));
         }
         public void PlayAttackAnimation(Skill skill){
-            var sequenceX = DOTween.Sequence();
-            var sequenceY = DOTween.Sequence();
-            var originalPosition = transform.position;
-            if(playerOwned.Value){
-                sequenceX.Append(transform.DOLocalMoveX(originalPosition.x + AttackAnimationOffsetX.Value,skill.Duration/2));
-                sequenceY.Append(transform.DOLocalMoveY(originalPosition.y + AttackAnimationOffsetY.Value,skill.Duration/2));
-            }else{
-                sequenceX.Append(transform.DOLocalMoveX(originalPosition.x - AttackAnimationOffsetX.Value,skill.Duration/2));
-                sequenceY.Append(transform.DOLocalMoveY(originalPosition.y - AttackAnimationOffsetY.Value,skill.Duration/2));
+            if(!isAnimatingAttack.Value){
+                var sequenceX = DOTween.Sequence();
+                var sequenceY = DOTween.Sequence();
+                var originalPosition = transform.position;
+                if(playerOwned.Value){
+                    sequenceX.Append(transform.DOLocalMoveX(originalPosition.x + AttackAnimationOffsetX.Value,skill.Duration/2));
+                    sequenceY.Append(transform.DOLocalMoveY(originalPosition.y + AttackAnimationOffsetY.Value,skill.Duration/2));
+                }else{
+                    sequenceX.Append(transform.DOLocalMoveX(originalPosition.x - AttackAnimationOffsetX.Value,skill.Duration/2));
+                    sequenceY.Append(transform.DOLocalMoveY(originalPosition.y - AttackAnimationOffsetY.Value,skill.Duration/2));
+                }
+                sequenceX.Append(transform.DOLocalMoveX(originalPosition.x,skill.Duration/2));
+                sequenceY.Append(transform.DOLocalMoveY(originalPosition.y,skill.Duration/2));
+                StartCoroutine(WaitForAnimation(isAnimatingAttack,skill.Duration));
             }
-            sequenceX.Append(transform.DOLocalMoveX(originalPosition.x,skill.Duration/2));
-            sequenceY.Append(transform.DOLocalMoveY(originalPosition.y,skill.Duration/2));
-        }
-        IEnumerator WaitForDestroy(float delay){
-            yield return new WaitForSeconds(delay);
-            Destroy(gameObject);
-        }
-        IEnumerator WaitForHitAnimation(float time){
-            yield return new WaitForSeconds(time);
-            hitAnimation = null;
         }
         public void PlayHitAnimation(){
-            if(hitAnimation == null){
+            if(!isAnimatingHit){
                 var originalColor = image.color;
                 image.color = Color.gray;
                 image.DOColor(originalColor,HitAnimationDuration.Value);
-                hitAnimation = StartCoroutine(WaitForHitAnimation(HitAnimationDuration.Value));
+                StartCoroutine(WaitForAnimation(isAnimatingHit,HitAnimationDuration.Value));
             }
+        }
+        public void PlayDodgeAnimation(){
+            if(!isAnimatingDodge.Value){
+                var sequence = DOTween.Sequence();
+                if(playerOwned.Value){
+                    sequence.Append(transform.DOLocalMoveX(transform.position.x -DodgeAnimationOffset.Value,DodgeAnimationDuration.Value/2));
+                }else{
+                    sequence.Append(transform.DOLocalMoveX(transform.position.x + DodgeAnimationOffset.Value,DodgeAnimationDuration.Value/2));
+                }
+                sequence.Append(transform.DOLocalMoveX(transform.position.x,DodgeAnimationDuration.Value/2));
+                StartCoroutine(WaitForAnimation(isAnimatingDodge,DodgeAnimationDuration.Value));
+            }
+
+
+        }
+        IEnumerator WaitForAnimation(BoolReference variable,float time){
+            variable.Value = true;
+            yield return new WaitForSeconds(time);
+            variable.Value = false;
         }
         //------------
         public void DealDamage(int amount,Unit source,List<UnitTypes> types,bool canCrit = true,bool ignoreArmour = false,bool ignoreShield = false,bool ignoreDodge = false){
