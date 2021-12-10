@@ -68,7 +68,6 @@ namespace Lutscherdieb.Pokemon{
             yield return new WaitForSeconds(skill.Duration);
             skillCoroutine = null;
             playerTurn.Value = false;
-            RandomEnemyMove();
         }
         IEnumerator EnemyUseSkillCoroutine(Skill skill){
             skill.Use(enemyUnit.Value,playerUnit.Value);
@@ -81,11 +80,7 @@ namespace Lutscherdieb.Pokemon{
                 playerTurn.Value = true;
             }else{
                 playerTurn.Value = false;
-                RandomEnemyMove();
             }
-        }
-        public void RandomEnemyMove(){
-            EnemyUseSkill(enemyUnit.Value.Skills[Random.Range(0,enemyUnit.Value.Skills.Count -1)]);
         }
 
     }
