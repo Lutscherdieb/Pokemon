@@ -17,6 +17,9 @@ namespace Lutscherdieb.Pokemon{
         public int Shield { get => shield; set => shield = value; }
         [SerializeField] List<Skill> skills;
         public List<Skill> Skills { get => skills; set => skills = value; }
+        [SerializeField] Rarity rarity;
+        public Rarity Rarity { get => rarity; set => rarity = value; }
+
 
     }
 }

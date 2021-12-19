@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Glumanda
   m_EditorClassIdentifier: 
   basePokemon: {fileID: 11400000, guid: 0442b59f34fbb2c4594c4c978d0a336c, type: 2}
-  hp: 833
+  hp: 462
   xp: 241
   level: 99
-  shield: 1017
+  shield: 483
   skills:
   - {fileID: 11400000, guid: 62e0fedadd77a4c4d9beac59de1b2961, type: 2}
   - {fileID: 11400000, guid: 67135589dcaee984183922e4e87f9d24, type: 2}

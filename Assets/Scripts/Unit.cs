@@ -199,7 +199,7 @@ namespace Lutscherdieb.Pokemon{
             if(!isAnimatingAttack.Value && !isAnimatingDeath.Value){
                 var sequenceX = DOTween.Sequence();
                 var sequenceY = DOTween.Sequence();
-                var originalPosition = transform.position;
+                var originalPosition = Vector3.zero;
                 if(playerOwned.Value){
                     sequenceX.Append(transform.DOLocalMoveX(originalPosition.x + AttackAnimationOffsetX.Value,skill.Duration/2));
                     sequenceY.Append(transform.DOLocalMoveY(originalPosition.y + AttackAnimationOffsetY.Value,skill.Duration/2));
@@ -223,12 +223,13 @@ namespace Lutscherdieb.Pokemon{
         public void PlayDodgeAnimation(){
             if(!isAnimatingDodge.Value){
                 var sequence = DOTween.Sequence();
+                var originalPosition = Vector3.zero;
                 if(playerOwned.Value){
                     sequence.Append(transform.DOLocalMoveX(transform.position.x -DodgeAnimationOffset.Value,DodgeAnimationDuration.Value/2));
                 }else{
                     sequence.Append(transform.DOLocalMoveX(transform.position.x + DodgeAnimationOffset.Value,DodgeAnimationDuration.Value/2));
                 }
-                sequence.Append(transform.DOLocalMoveX(transform.position.x,DodgeAnimationDuration.Value/2));
+                sequence.Append(transform.DOLocalMoveX(originalPosition.x,DodgeAnimationDuration.Value/2));
                 StartCoroutine(WaitForAnimation(isAnimatingDodge,DodgeAnimationDuration.Value));
             }
 
